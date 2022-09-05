@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header{
+  /*width: 100;*/ /*書かなくてok*/
+  height: 50px;
+  background-color: #ff9a4b;
+}
+.main{
+  /*padding: 50px 0;*/ /*paddingはボーダーの内側に空白を作る。ここでは不適切。*/
+  margin: 50px auto; 
+  width: 960px;
+  /*height: 400px;*/ /*指定不要*/
+  display: flex; /* Flexboxの利用 */
+  /*justify-content: center;*/ /*指定不要*/
+}
+.box{
+  width: 300px;
+  /*height: 300px*/ /*指定不要*/
+  background-color: #eeeeee;
+  padding: 10px;  /*ボーダーの内側に空白を作る*/
+  margin-right: 30px;
+  position: relative; /*relativeは移動するときの基準が元いた位置。（⇔absoluteはウィンドウまたは親要素が基準）*/
+}
+/*.boxの↑で指定したmargin-right:30px;を打ち消してディスプレイを整える*/
+.box:list-child{
+  margin-right: 0;
+}
+
+.box-image1{
+  /*margin: 10px;*/
+  height: 150px;
+  background-image: url(img/flow01.png);
+  background-size: cover;
+  background-position: center;
+}
+.box-image2{
+  /*margin: 10px;*/
+  height: 150px;
+  background-image: url(img/flow02.png);
+  background-size: cover;
+  background-position: center;
+}
+.box-image3{
+  /*margin: 10px;*/
+  height: 150px;
+  background-image: url(img/flow03.png);
+  background-size: cover;
+  background-position: center;
+}
+.step{
+  position: absolute; /*親要素を基準にしてポジションを決める*/
+  top: 0;
+  left: 0;
+  background-color: #ff9a4b;
+  color: #fff;
+}
+/*.box-text{
+  margin-top: 15px;
+}
+.text{
+  margin-top: 5px;
+}*/
+.title{
+  margin: 15px 0 5px;
+}
+.footer{
+  height: 50px;
+  background-color: #aaaaaa;
+}
